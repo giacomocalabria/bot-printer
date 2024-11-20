@@ -7,7 +7,7 @@ import sys, requests, re, time
 
 ## The get_page function gets the html page of the printer
 def get_page():
-	res = requests.get('http://192.168.5.44/web/guest/it/websys/webArch/getStatus.cgi',)
+	res = requests.get('http://<printer-ip>/web/guest/it/websys/webArch/getStatus.cgi',)
 	if res.status_code == 200:
 		return res.text
 	else:
