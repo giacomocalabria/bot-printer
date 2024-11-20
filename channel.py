@@ -19,6 +19,7 @@ nomi = [['Toner','Nero','Ciano','Magenta','Giallo'],['Vassoio',1,2,3]]
 levelGood = 25 # livello sopra il quale lo stato è buono
 levelBad  = 0  # livello sotto il quale (incluso) lo stato è cattivo
 
+# Define the function to send the status of the printer to the user and send a warning if the level is below a certain threshold.
 async def UpdateStatus(info, update: Update, context: ContextTypes) -> None:
     status = []
     for i in [0,1]:
@@ -51,6 +52,7 @@ Ora aggiornamento:
 
     await update.message.reply_text(text, parse_mode="Markdown")
 
+# Define the GET command to get the status of the printer.
 async def get(update: Update, context: ContextTypes) -> None:
     await update.message.reply_text("Getting status...")
     try:
@@ -60,6 +62,7 @@ async def get(update: Update, context: ContextTypes) -> None:
     except Exception as e:
         print(e)
 
+# Define the BACKUP command (not used)
 '''async def backup(update: Update, context: ContextTypes) -> None:
     await update.message.reply_text("Backing up data...")
     try:
