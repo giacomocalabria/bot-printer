@@ -5,7 +5,7 @@ The get_counter module is used to get the counter of the printer. It uses the re
 import requests, re, time
 
 ## The get_page function gets the html page of the printer
-def get_page2():
+def get_page():
     res = requests.get('http://94.91.27.74/web/guest/it/websys/status/getUnificationCounter.cgi',)
     if res.status_code == 200:
         return res.text
@@ -13,7 +13,7 @@ def get_page2():
         print('Error in get_counter::get_page\n+-Status not 200',flush=True)#sys.exit
         return None
 
-def get_page():
+def get_page_prova():
     with open("Contatore.html", "r", encoding="utf-8") as file:
         return file.read()
     
