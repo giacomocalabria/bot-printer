@@ -58,3 +58,6 @@ def get_info():
 		contatore +=1
 		time.sleep(1)
 	return [inkLevels,paperLevels]
+
+if __name__ == '__main__':
+	print(get_info())
