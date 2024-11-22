@@ -30,3 +30,9 @@ This widget should run on a computer that is connected to the printers and have 
 
 
 ![image](https://github.com/user-attachments/assets/151d3d6d-fee0-4495-acef-7613ba567141)
+
+# Printer counter
+This module is used to count the number of pages printed by the printer. The module will count the number of pages printed by the printer and will update every day at midnight.
+
+## How to use
+This module should run on a computer that is connected to the printers and have access to the printer. The module retrive the number of pages printed by the web interface of the printer. The module will run in the background and save the number of pages printed by the printer in a file.
